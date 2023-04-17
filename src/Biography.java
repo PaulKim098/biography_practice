@@ -51,14 +51,13 @@ public class Biography {
                     "information? (Y/N)").toUpperCase().startsWith("N")) break;
             String name = ScannerHelper.getString("What is the name of the book?");
             String genre = ScannerHelper.getString("What is the genre of the book?");
-            int totalPage = ScannerHelper.getInt("How many pages does the book have?");
+            int totalPages = ScannerHelper.getInt("How many pages does the book have?");
 
-            books.add(new Book(name, genre, totalPage));
+            books.add(new Book(name, genre, totalPages));
 
         }while (true);
 
         Author author = new Author(firstName, lastName, country, isAlive, age, books);
-        System.out.println("Author's books are as listed below:");
         System.out.println("Author's information = " + author);
 
     }

@@ -37,6 +37,14 @@ public class Author {
      */
     //YOUR CODE HERE
 
+    /*
+    Expected result:
+        Author's information = Author{firstName='Stefan', lastName='Zweig', country='Austria', isAlive=false}
+        Author's books are as listed below:
+        Book{name='Amok', genre:'tale', page=189}
+        Book{name='The Royal Game', tale='novella', page=53}
+        Book{name='24 Hours in the Life of a Woman', tale='novella', page=80}
+     */
     @Override
     public String toString() {
         if (isAlive) {
@@ -46,14 +54,14 @@ public class Author {
                     ", country='" + country + '\'' +
                     ", isAlive=" + isAlive +
                     ", age=" + age +
-                    ", books=" + books +
-                    '}';
+                    "}\nAuthor's books are as listed below:\n" +
+                    books;
         } else return "Author{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", country='" + country + '\'' +
                 ", isAlive=" + isAlive +
-                ", books=" + books +
-                '}';
+                "}\nAuthor's books are as listed below:\n" +
+                 books;
     }
 }
